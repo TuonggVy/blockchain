@@ -1,0 +1,58 @@
+.bedrock {
+    padding: 80px 20px;
+    background: black;
+    color: white;
+}
+
+.bedrock-row1, .bedrock-row2 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    margin: 20px;
+    margin-left: 200px;
+}
+
+.bedrock-row2  {
+    margin-top: 100px;
+}
+
+.bedrock-row2 .subtitle-bedrock {
+    margin-top: 50px;
+}
+
+.bedrock-col2 {
+    margin-left: 200px;
+
+}
+
+.image-bedrock {
+    width: 120px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.title-bedrock {
+    color: white;
+    text-align: left; 
+    font-size: 50px; 
+    max-width: 300px;
+    margin-left: 208px;
+}
+
+.subtitle-bedrock {
+    color: white;
+
+    text-align: left; 
+    font-size: 27px; 
+}
+
+.content-bedrock {
+    color: #aaa;
+    text-align: left; 
+    max-width: 400px; 
+    margin: 0; 
+    margin-top: 20px;   
+    line-height: 1.4;
+    font-size: 18px;
+}
