@@ -1,6 +1,7 @@
 import { DiscordOutlined, TwitterOutlined, XOutlined } from "@ant-design/icons";
 import React from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div className="navbar">
@@ -20,14 +21,15 @@ function NavBar() {
         </li>
       </ul>
       <ul className="menu">
-        <li>Docs</li>
+        <Link to={"/docs"}>
+          <li>Docs</li>
+        </Link>
         <li>Blog</li>
         <li>Ecosystem</li>
         <li>Explorer</li>
       </ul>
       <button className="nav-btn">Run a light node</button>
     </div>
-    
   );
 }
 
