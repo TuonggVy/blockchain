@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const partners = [
-  { name: 'Gateway FM', url: 'https://gateway.fm/', img: '/assets/images/gatewayfm.png' },
-  { name: 'Fermah', url: 'https://befilabs.com/', img: '/assets/images/fermah.png' },
-  { name: 'ZKM', url: 'https://www.zkm.io/', img: '/assets/images/zkm.avif' },
-  { name: 'Bitfinity', url: 'https://bitfinity.network/', img: '/assets/images/bitfinity.png' },
-  { name: 'Nubit', url: 'https://www.nubit.org/', img: '/assets/images/nubit.png' },
-  { name: 'Orochi', url: 'https://www.orochi.network/', img: '/assets/images/orochi.png' },
-  { name: 'Snarkify', url: 'https://snarkify.io/', img: '/assets/images/snarkify.png' },
-  { name: 'SuperSight', url: 'https://supersight.xyz/', img: '/assets/images/Supersight.png' },
-  { name: 'U2U Network', url: 'https://u2u.xyz/', img: '/assets/images/u2u.png' },
-  { name: 'Befi', url: 'https://befilabs.com/', img: '/assets/images/befi.webp' },
+  { name: 'Runes Chain', url: 'https://gateway.fm/', img: "https://www.layeredge.io/img/partners/runes_chain.png" },
+  { name: 'Fermah', url: 'https://befilabs.com/', img: "https://www.layeredge.io/img/partners/fermah.png" },
+  { name: 'ZKM', url: 'https://www.zkm.io/', img: "https://www.layeredge.io/img/partners/zkm.png" },
+  { name: 'Bitfinity', url: 'https://bitfinity.network/', img: "https://www.layeredge.io/img/partners/bitfinity_evm.png" },
+  { name: 'Nubit', url: 'https://www.nubit.org/', img: "https://www.layeredge.io/img/partners/nubit.png" },
+  { name: 'Orochi', url: 'https://www.orochi.network/', img: "https://www.layeredge.io/img/partners/orochi.png" },
+  { name: 'Snarkify', url: 'https://snarkify.io/', img: "https://www.layeredge.io/img/partners/snark.svg" },
+  { name: 'SuperSight', url: 'https://supersight.xyz/', img: "https://www.layeredge.io/img/partners/supersight.png" },
+  { name: 'U2U Network', url: 'https://u2u.xyz/', img: "https://www.layeredge.io/img/partners/u2u_network.png" },
+  { name: 'Befi', url: 'https://befilabs.com/', img: "https://www.layeredge.io/img/partners/befilabs.png" },
 ];
 
 

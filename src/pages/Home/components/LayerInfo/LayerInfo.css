@@ -21,11 +21,11 @@
 
 .partner {
   display: inline-block;
-  margin: 0 10px; /* Khoảng cách giữa các logo */
+  margin: 0 20px; 
 }
 
 .partner img {
-  max-width: 100px; /* Điều chỉnh kích thước logo nếu cần */
+  max-width: 100px; 
   max-height: 100px;
 }
 
@@ -65,11 +65,11 @@
 
   .partner {
     display: inline-block;
-    margin: 0 10px; /* Khoảng cách giữa các logo */
+    margin: 0 10px; 
   }
 
   .partner img {
-    max-width: 100px; /* Điều chỉnh kích thước logo nếu cần */
+    max-width: 100px; 
     max-height: 100px;
   }
 
