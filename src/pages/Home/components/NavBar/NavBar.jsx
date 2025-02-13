@@ -25,7 +25,9 @@ function NavBar() {
           <li>Docs</li>
         </Link>
         <li>Blog</li>
-        <li>Ecosystem</li>
+        <Link to={"/ecosystem"}>
+          <li>Ecosystem</li>
+        </Link>
         <li>Explorer</li>
       </ul>
       <button className="nav-btn">Run a light node</button>
