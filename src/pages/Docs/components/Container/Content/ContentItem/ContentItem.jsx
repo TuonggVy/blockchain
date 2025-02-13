@@ -33,7 +33,7 @@ ContentItem.propTypes = {
   section: PropTypes.shape({
     title: PropTypes.string.isRequired,
     para: PropTypes.arrayOf(string),
-    note: PropTypes.string.isRequired,
+    note: PropTypes.string,
     children: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
