@@ -7,10 +7,12 @@
   .doc-content-aside {
     width: calc(100% / 5);
     background-color: green;
+    flex-shrink: 0;
   }
+
   .doc-content-main {
     flex-grow: 1;
-    background-color: aqua;
+    background-color: white;
     padding: 32px 48px;
 
     .heading {
@@ -21,35 +23,84 @@
         margin-top: 12px;
       }
     }
+
+    // Part 1 para
     .content-para-list {
       margin: 0 44px;
       .content-para-item {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        .content-para-item-wrap {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
 
-        h2 {
-          margin-top: 30px;
-        }
+          h2 {
+            margin-top: 30px;
+          }
 
-        .content-para-item-note-wrap{
+          .content-para-item-note-wrap {
             background-color: lightgray;
             width: 100%;
             padding: 16px;
 
-            .content-para-item-note-item{
-                display: flex;
-                align-items: flex-start;
+            .content-para-item-note-item {
+              display: flex;
+              align-items: flex-start;
 
-                .note-icon{
-                    margin-top: 4px;
-                    margin-right: 16px;
-                    font-size: 20px;
-                }
+              .note-icon {
+                margin-top: 4px;
+                margin-right: 16px;
+                font-size: 20px;
+              }
             }
+          }
         }
       }
     }
+
+    // Part 2 next prev subject
+    .content-next-prev-wrap {
+      margin: 24px 44px;
+      margin-top: 44px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .content-next-single,
+      .content-prev-single {
+        flex: 1;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--grey-line-color);
+        border-radius: var(--border-radius-small);
+        cursor: pointer;
+
+        p {
+          display: flex;
+          flex-direction: column;
+
+          span:first-child {
+            color: var(--text-color-grey);
+          }
+          span:last-child {
+            font-size: 18px;
+          }
+        }
+      }
+      .content-prev-single {
+        p {
+          text-align: right;
+        }
+      }
+    }
+    
+    // Part 3 time update
+    .content-time-wrap {
+      margin: 0 44px;
+      color: var(--text-color-grey);
+    }
   }
+
 }
