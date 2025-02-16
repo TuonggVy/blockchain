@@ -1,13 +1,12 @@
-import {
-  ArrowRightOutlined,
-  DoubleLeftOutlined,
-  DoubleRightOutlined,
-  LeftOutlined,
-  RightOutlined,
-} from "@ant-design/icons";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import styles from "./ContainerBottom.module.scss";
+import { useState } from "react";
+import Pagination from "../../../../../../component/Pagination/Pagination";
 
 function ContainerBottom() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemPerPage = 5;
+
   const BATCHES_DATA = [
     {
       id: 1,
@@ -29,7 +28,44 @@ function ContainerBottom() {
       id: 5,
       name: "Asbedfreie2825",
     },
+    {
+      id: 6,
+      name: "Asbedfreie2826",
+    },
+    {
+      id: 7,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 8,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 9,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 10,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 11,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 12,
+      name: "Asbedfreie2827",
+    },
+    {
+      id: 13,
+      name: "Asbedfreie2827",
+    },
   ];
+
+  // Pagination
+  const indexOfLastItem = currentPage * itemPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemPerPage;
+  const currentItem = BATCHES_DATA.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <div className={styles["container-bottom"]}>
@@ -43,7 +79,7 @@ function ContainerBottom() {
 
       <div className={styles["container-bottom-content"]}>
         <ul className={styles["list-batch"]}>
-          {BATCHES_DATA.map((batch) => (
+          {currentItem.map((batch) => (
             <li key={batch.id} className={styles["each-batch"]}>
               <p>{batch.name}</p>
               <span>
@@ -53,31 +89,12 @@ function ContainerBottom() {
           ))}
         </ul>
 
-        <div className={styles["page-pagination"]}>
-          <button className={`${styles["arrow-left"]}`}>
-            <DoubleLeftOutlined />
-          </button>
-          <button className={`${styles["arrow-left"]}`}>
-            <LeftOutlined />
-          </button>
-          <div className={styles["page-control"]}>
-            <button
-              className={`${styles["page-control-btn"]} ${styles["active"]}`}
-            >
-              1
-            </button>
-            <button className={`${styles["page-control-btn"]}`}>2</button>
-            <button className={`${styles["page-control-btn"]} `}>3</button>
-            <button className={`${styles["page-control-btn"]} `}>4</button>
-            <button className={`${styles["page-control-btn"]}`}>5</button>
-          </div>
-          <button className={`${styles["arrow-right"]}`}>
-            <RightOutlined />
-          </button>
-          <button className={`${styles["arrow-right"]}`}>
-            <DoubleRightOutlined />
-          </button>
-        </div>
+        <Pagination
+        itemPerPage={itemPerPage}
+          totalItems={BATCHES_DATA.length}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </div>
     </div>
   );

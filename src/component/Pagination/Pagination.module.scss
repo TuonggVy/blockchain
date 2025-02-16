@@ -1,0 +1,38 @@
+.page-pagination {
+    margin-top: 24px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    button {
+      background-color: transparent;
+      color: var(--text-color-grey);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0 8px;
+      
+      &.active {
+        color: rgb(192, 7, 192);
+      }
+    }
+
+    .page-control {
+      display: flex;
+      gap: 4px;
+      .page-control-btn {
+        width: 40px;
+        height: 40px;
+        color: white;
+        font-size: 22px;
+        border-radius: 6px;
+        background-color: transparent;
+
+        &.active {
+          background-color: rgb(192, 7, 192);
+        }
+      }
+    }
+  }
