@@ -1,0 +1,81 @@
+.container-main {
+  background-color: black;
+  padding-bottom: 122px;
+
+  .container-box-list {
+    background-color: black;
+    padding: 0 122px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    .container-box {
+      background-color: black;
+      padding: 16px 32px;
+      height: 122px;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid black;
+      gap: 16px;
+
+      &:nth-child(2),
+      &:last-child {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+
+      .container-box-number-type,
+      .container-box-number {
+        flex: 1 1;
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+
+      .container-box-number-type {
+        font-size: 18px;
+      }
+
+      .container-box-letter {
+        color: var(--text-color-grey);
+      }
+
+      .container-box-icon {
+        color: white;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .container-protocols {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 22px 148px;
+    margin-bottom: 0;
+
+    span {
+      margin-right: auto;
+      color: var(--text-color-grey);
+    }
+    .protocals-logo {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}

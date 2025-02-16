@@ -1,0 +1,136 @@
+header {
+    padding: 26px 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 118px;
+  
+    .header-wrap {
+      display: flex;
+      align-items: center;
+  
+      .header-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        .logo {
+          text-decoration: none;
+          font-size: 30px;
+          font-weight: bold;
+          color: white;
+        }
+  
+        p {
+          color: white;
+          font-size: 20px;
+        }
+  
+        .social-icon {
+          list-style: none;
+          display: flex;
+          color: var(--text-color-grey);
+  
+          li a {
+            padding: 8px;
+            font-size: 24px;
+            cursor: pointer;
+  
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+  
+      .header-search {
+        box-sizing: border-box;
+  
+        .header-search-wrap {
+          padding: 8px 16px;
+          margin: 0 30px;
+          border: 1px solid rgb(57, 57, 57);
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+  
+          .header-search-icon {
+            margin-right: 16px;
+            color: var(--text-color-grey);
+            font-size: 18px;
+          }
+  
+          input {
+            font-size: 18px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: white;
+            width: 400px;
+          }
+        }
+      }
+  
+      .header-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul {
+          display: flex;
+          list-style: none;
+          color: var(--text-color-grey);
+  
+          li a {
+            padding: 8px;
+            font-size: 24px;
+            cursor: pointer;
+  
+            &:hover {
+              color: white;
+            }
+          }
+        }
+  
+        p {
+          color: white;
+          font-size: 20px;
+        }
+  
+        .header-cost {
+          .header-cost-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(57, 57, 57);
+            border-radius: 100px;
+  
+            .header-cost-left,
+            .header-cost-right {
+              padding: 10px 16px;
+              display: flex;
+              align-items: center;
+  
+              span {
+                color: var(--text-color-grey);
+                font-size: 12px;
+                margin-right: 10px;
+              }
+  
+              strong {
+                color: white;
+              }
+            }
+  
+            .header-cost-left {
+              border-right: 1px solid rgb(57, 57, 57);
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+.container {
+  margin-top: 118px;
+  margin-bottom: 100px;
+  background-color: black;
+  width: 100%;
+  min-height: 1000px;
+
+  .container-wrap {
+    margin: 0 220px;
+
+    .container-header {
+      background-color: black;
+      text-align: center;
+      color: white;
+      padding: 60px 0;
+      padding-top: 90px;
+      h1 {
+        font-size: 36px;
+      }
+    }
+  }
+}

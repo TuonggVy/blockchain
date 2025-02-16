@@ -30,7 +30,7 @@ function AsideRight({ docData }) {
             {section.children && reRender(section.children)}
           </div>
         ))}
-        
+
         <div className={styles["doc-asideRight-footer"]}>
           <p>Was this helpful</p>
           <div className={styles["asideRight-footer-icon"]}>

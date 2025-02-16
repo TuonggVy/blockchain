@@ -1,4 +1,4 @@
-import { RightOutlined } from "@ant-design/icons";
+import { RightOutlined, RiseOutlined } from "@ant-design/icons";
 import AsideItem from "./AsideItem/AsideItem";
 import styles from "./AsideLeft.module.scss";
 import { useState } from "react";
@@ -72,15 +72,19 @@ function AsideLeft() {
       children: [
         {
           title: "Twitter",
+          icon: <RiseOutlined />,
         },
         {
           title: "Discord",
+          icon: <RiseOutlined />,
         },
         {
           title: "Medium",
+          icon: <RiseOutlined />,
         },
         {
           title: "Telegram",
+          icon: <RiseOutlined />,
         },
       ],
     },
@@ -102,6 +106,8 @@ function AsideLeft() {
                   <li key={index} className={styles["doc-bar-mini-item"]}>
                     <p className={styles["doc-bar-mini-item-p"]}>
                       {item.title}
+
+                      {item.icon && <span style={{ marginLeft: "10px" }}>{item.icon}</span>}
 
                       {item.children && (
                         <span
