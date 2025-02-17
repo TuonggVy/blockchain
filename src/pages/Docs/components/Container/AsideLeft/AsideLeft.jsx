@@ -2,8 +2,9 @@ import { RightOutlined, RiseOutlined } from "@ant-design/icons";
 import AsideItem from "./AsideItem/AsideItem";
 import styles from "./AsideLeft.module.scss";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-function AsideLeft() {
+function AsideLeft({ contentTitle, setContentTitle }) {
   const [isOpenItem, setIsOpenItem] = useState(false);
 
   const toggleOpenItem = (e) => {
@@ -103,11 +104,20 @@ function AsideLeft() {
               {/*Chưa tối ưu đc css (padding) nên tạm thời chia ra 2 thằng */}
               <ul className={styles["doc-bar-mini-list"]}>
                 {section.children.map((item, index) => (
-                  <li key={index} className={styles["doc-bar-mini-item"]}>
+                  <li
+                    onClick={() => {
+                      setContentTitle(item.title);
+                      console.log(item.title);
+                    }}
+                    key={index}
+                    className={styles["doc-bar-mini-item"]}
+                  >
                     <p className={styles["doc-bar-mini-item-p"]}>
                       {item.title}
 
-                      {item.icon && <span style={{ marginLeft: "10px" }}>{item.icon}</span>}
+                      {item.icon && (
+                        <span style={{ marginLeft: "10px" }}>{item.icon}</span>
+                      )}
 
                       {item.children && (
                         <span
@@ -125,6 +135,7 @@ function AsideLeft() {
                       <ul className={styles["doc-bar-mini-list-two"]}>
                         {item.children.map((child, index) => (
                           <AsideItem
+                            setContentTitle={setContentTitle}
                             isOpenItem={isOpenItem}
                             toggleOpenItem={toggleOpenItem}
                             key={index}
@@ -147,5 +158,10 @@ function AsideLeft() {
     </aside>
   );
 }
+
+AsideLeft.propTypes = {
+  contentTitle: PropTypes.string.isRequired,
+  setContentTitle: PropTypes.func,
+};
 
 export default AsideLeft;

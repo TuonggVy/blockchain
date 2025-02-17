@@ -1,9 +1,7 @@
 import { useState } from "react";
 import SearchPopup from "./components/Navbar/SearchPopup/SearchPopup";
-import styles from "./Docs.module.scss";
 import Navbar from "./components/Navbar/Navbar";
-import AsideLeft from "./components/Container/AsideLeft/AsideLeft";
-import Content from "./components/Container/Content/Content";
+import Container from "./components/Container/Container";
 
 function Docs() {
   const [openSearch, setOpenSearch] = useState(false);
@@ -16,12 +14,7 @@ function Docs() {
       <SearchPopup openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
       {/*Container */}
-      <div className={styles["doc-container"]}>
-        {/*Aside Left */}
-        <AsideLeft />
-
-        <Content />
-      </div>
+      <Container/>
     </>
   );
 }

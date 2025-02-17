@@ -2,7 +2,7 @@ import { FrownOutlined, MehOutlined, SmileOutlined } from "@ant-design/icons";
 import styles from "./AsideRight.module.scss";
 import PropTypes from "prop-types";
 
-function AsideRight({ docData }) {
+function AsideRight({ contentTitle, docData }) {
   const reRender = (items) => {
     return (
       <ul className={styles["doc-asideRight-list"]}>
@@ -25,11 +25,16 @@ function AsideRight({ docData }) {
   return (
     <aside className={styles["doc-content-aside"]}>
       <div className={styles["doc-asideRight-wrap"]}>
-        {docData.map((section, index) => (
-          <div key={index}>
-            {section.children && reRender(section.children)}
-          </div>
-        ))}
+        {docData.map((section, index) => {
+          if (section.heading.toLowerCase() === contentTitle.toLowerCase()) {
+            return (
+              <div key={index}>
+                {section.children && reRender(section.children)}
+              </div>
+            );
+          }
+          return null;
+        })}
 
         <div className={styles["doc-asideRight-footer"]}>
           <p>Was this helpful</p>
@@ -62,6 +67,7 @@ AsideRight.propTypes = {
       ),
     })
   ).isRequired,
+  contentTitle: PropTypes.string.isRequired,
 };
 
 export default AsideRight;

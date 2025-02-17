@@ -3,7 +3,7 @@ import { RightOutlined } from "@ant-design/icons";
 import styles from "../AsideLeft.module.scss";
 import PropTypes from "prop-types";
 
-function AsideItem({ item }) {
+function AsideItem({ item, setContentTitle }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = (e) => {
@@ -12,12 +12,20 @@ function AsideItem({ item }) {
   };
 
   return (
-    <li className={styles["doc-bar-mini-item-two"]}>
-      <p className={styles["doc-bar-mini-item-two-p"]} onClick={toggleOpen}>
+    <li
+      onClick={(e) => {
+        e.stopPropagation();
+        setContentTitle(item.title);
+        console.log(item.title);
+      }}
+      className={styles["doc-bar-mini-item-two"]}
+    >
+      <p className={styles["doc-bar-mini-item-two-p"]}>
         {item.title}
 
         {item.children && (
           <span
+            onClick={toggleOpen}
             className={`${styles["doc-bar-p-icon"]} ${
               isOpen ? styles["open"] : ""
             }`}
@@ -30,7 +38,11 @@ function AsideItem({ item }) {
       {isOpen && item.children && (
         <ul className={styles["doc-bar-mini-list-two"]}>
           {item.children.map((child, index) => (
-            <AsideItem key={index} item={child} />
+            <AsideItem
+              setContentTitle={setContentTitle}
+              key={index}
+              item={child}
+            />
           ))}
         </ul>
       )}
@@ -48,6 +60,7 @@ AsideItem.propTypes = {
       })
     ),
   }).isRequired,
+  setContentTitle: PropTypes.func,
 };
 
 export default AsideItem;
