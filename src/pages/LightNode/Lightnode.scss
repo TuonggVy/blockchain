@@ -1,0 +1,205 @@
+// Màu sắc chủ đạo
+$bg-color: #000;
+$sidebar-bg: #010101;
+$primary-color: #2563eb;
+$text-color: #fff;
+$inactive-text: #777;
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+  
+    .sidebar-wrapper {
+      display: flex;
+      background-color: #111;
+  
+      .separator {
+        width: 1px;
+        background: #1f1f1f;
+      }
+    }
+  
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+    }
+  }
+  
+
+// Sidebar
+.sidebar {
+  width: 250px;
+  background: $sidebar-bg;
+  color: $text-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+//   justify-content: space-between;
+
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: $inactive-text;
+    margin-top: 20px;
+    small {
+      font-size: 12px;
+      font-weight: lighter;
+      color: $inactive-text;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    li {
+      margin: 10px 0px;
+      display: flex;
+      align-items: center;
+    //   padding: 10px 0;
+      padding: 18px 0px;
+      padding-left: 15px;
+      padding-right: 18px;
+      border: 1px solid transparent; 
+      border-radius: 30px;
+      box-sizing: border-box; 
+      font-size: 18px;
+      font-weight: lighter;
+      color: $inactive-text;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: $text-color;
+        color: $text-color;
+        border-color: #1f1f1f; 
+        background-color: #010101 
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+
+      .lock-icon {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .bottom-links {
+    margin-top: 150px;
+  
+    p {
+      margin: 10px 0px;
+      color: $text-color;
+      cursor: pointer;
+      padding: 18px 0px;
+      padding-left: 15px;
+      padding-right: 18px;
+      border: 1px solid transparent; 
+      border-radius: 30px;
+      box-sizing: border-box; 
+  
+      &:hover {
+        color: $text-color;
+        border-color: #1f1f1f; 
+        background-color: #010101 
+      }
+    }
+  }
+}
+
+// Wallet Connect Box
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-container {
+  background: #131313;
+  border: 1px solid #1f1f1f;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: $text-color;
+  width: 400px;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    color: $inactive-text;
+    margin-bottom: 20px;
+  }
+
+  .connect-btn {
+    background: $primary-color;
+    color: $text-color;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background: #4d85ff;
+    }
+  }
+
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    .step {
+      width: 25px;
+      height: 25px;
+      background: $inactive-text;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-color;
+      font-size: 14px;
+      font-weight: bold;
+
+      &.active {
+        background: $primary-color;
+      }
+    }
+
+    .line {
+      width: 40px;
+      height: 2px;
+      background: $inactive-text;
+      margin: 0 10px;
+    }
+
+    .step2 {
+      width: 25px;
+      height: 25px;
+      background: #131313;
+      border: 1px solid $primary-color;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $primary-color;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
