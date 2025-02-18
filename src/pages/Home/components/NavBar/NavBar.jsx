@@ -3,6 +3,10 @@ import React from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 function NavBar() {
+  
+  const handleLightNode = () => {
+    window.open("/lightnode", "_blank");
+  }
   return (
     <div className="navbar">
       <div className="logo">Layeredge</div>
@@ -30,7 +34,7 @@ function NavBar() {
         </Link>
         <li>Explorer</li>
       </ul>
-      <button className="nav-btn">Run a light node</button>
+      <button onClick={handleLightNode} className="nav-btn">Run a light node</button>
     </div>
   );
 }
