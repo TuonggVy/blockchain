@@ -3,10 +3,9 @@ import React from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 function NavBar() {
-  
   const handleLightNode = () => {
     window.open("/lightnode", "_blank");
-  }
+  };
   return (
     <div className="navbar">
       <div className="logo">Layeredge</div>
@@ -25,16 +24,22 @@ function NavBar() {
         </li>
       </ul>
       <ul className="menu">
-        <Link to={"/docs"}>
-          <li>Docs</li>
-        </Link>
-        <li>Blog</li>
-        <Link to={"/ecosystem"}>
-          <li>Ecosystem</li>
-        </Link>
-        <li>Explorer</li>
+        <li>
+          <Link to={"/docs"}>Docs</Link>
+        </li>
+        <li>
+          <Link to={"/blog"}>Blog</Link>
+        </li>
+        <li>
+          <Link to={"/ecosystem"}>Ecosystem</Link>
+        </li>
+        <li>
+          <Link to={"/explorer"}>Explorer</Link>
+        </li>
       </ul>
-      <button onClick={handleLightNode} className="nav-btn">Run a light node</button>
+      <button onClick={handleLightNode} className="nav-btn">
+        Run a light node
+      </button>
     </div>
   );
 }

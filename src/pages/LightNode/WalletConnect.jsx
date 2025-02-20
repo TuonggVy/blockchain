@@ -1,5 +1,4 @@
 import './Lightnode.scss'
-import React from "react";
 
 function WalletConnect() {
   return (

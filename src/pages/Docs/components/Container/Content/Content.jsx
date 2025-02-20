@@ -81,7 +81,7 @@ function Content({ contentTitle }) {
       heading: "Aggregation",
       children: [
         {
-          title: "What Is LayerEdge",
+          title: "How Is LayerEdge Work",
           para: [
             "Building on Babylon’s security and OP_CAT’s optimization, the aggregation layer forms the final piece of the puzzle by ensuring that zk-proof verification on Bitcoin is both scalable and cost-efficient. It’s through aggregation that LayerEdge enables complex off-chain computations to be verified on Bitcoin without incurring prohibitive costs, making the LayerEdge verification layer both modular and adaptable.",
           ],

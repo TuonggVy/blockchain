@@ -1,6 +1,7 @@
 import { MenuOutlined, SearchOutlined } from "@ant-design/icons";
 import styles from "./Navbar.module.scss";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Navbar({ setOpenSearch }) {
   return (
@@ -10,7 +11,9 @@ function Navbar({ setOpenSearch }) {
         <button className={styles["menu-icon"]}>
           <MenuOutlined className={styles["menu-icon-style"]} />
         </button>
-        <span>LayerEdge</span>
+        <span>
+          <Link to={"/"}>LayerEdge</Link>
+        </span>
       </div>
       {/*Search */}
       <div className={styles["doc-search"]}>
