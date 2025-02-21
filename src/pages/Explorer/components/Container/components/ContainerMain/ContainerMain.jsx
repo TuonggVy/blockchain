@@ -38,14 +38,14 @@ function ContainerMain() {
       <div className={styles["container-protocols"]}>
         <span>Protocols Aggregated by LayerEdge</span>
         <div className={styles["protocals-logo"]}>
-          <img src="/public/assets/images/mintair_logo.png" />
-          <img src="/public/assets/images/avail_logo.png" />
-          <img src="/public/assets/images/bitfinity_logo.png" />
-          <img src="/public/assets/images/bitfinity_logo.png" />
-          <img src="/public/assets/images/celestia_logo.png" />
-          <img src="/public/assets/images/u2u_logo.png" />
-          <img src="/public/assets/images/only_logo.png" />
-          <img src="/public/assets/images/only_logo.png" />
+          <img src="/assets/images/mintair_logo.png" />
+          <img src="/assets/images/avail_logo.png" />
+          <img src="/assets/images/bitfinity_logo.png" />
+          <img src="/assets/images/bitfinity_logo.png" />
+          <img src="/assets/images/celestia_logo.png" />
+          <img src="/assets/images/u2u_logo.png" />
+          <img src="/assets/images/only_logo.png" />
+          <img src="/assets/images/only_logo.png" />
         </div>
       </div>
     </div>
