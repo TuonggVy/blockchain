@@ -219,7 +219,7 @@ function Features({ categories, projects }) {
   return (
     <section className="features">
       <h2 className="features-title">
-        Powering Trust-Minimized Settlement on Bitcoin
+        Powering Trust-Minimized <br /> Settlement on Bitcoin
       </h2>
       <p className="features-desc">
         LayerEdge opens doors for anyone to tap into Bitcoin's security, while
