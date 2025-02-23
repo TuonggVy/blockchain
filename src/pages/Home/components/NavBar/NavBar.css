@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 15px 30px;
   background: transparent;
@@ -12,11 +12,20 @@
   background-color: black;
 }
 
+.ele1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ele2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: white;
-  margin-right: 10px;
 }
 
 .icon {
@@ -24,12 +33,12 @@
   color: #949494;
   font-size: 15px;
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 8px;
+  margin-left: 10px;
 }
 
 .icon li {
   list-style: none;
-  /* padding: 12px; */
   padding: 0 8px;
 }
 
@@ -41,8 +50,8 @@
 .menu {
   display: flex;
   gap: 15px;
-  margin-left: 150px;
   list-style: none;
+  margin-right: 10px;
 }
 
 .menu li {
@@ -51,6 +60,8 @@
   background-color: transparent;
   border-radius: 30px;
   padding: 10px 20px;
+  text-align: center;
+  width: fit-content;
 }
 
 .menu li:hover {
@@ -76,4 +87,79 @@
 
 .nav-btn:hover {
   background: #202020;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/*  Responsive  */
+@media screen and (max-width: 980px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    margin-top: -12px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 345px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu li:hover {
+    cursor: pointer;
+    border-color: #202020;
+    background-color: #202020;
+  }
+
+  .nav-btn {
+    position: absolute;
+    font-size: 16px;
+    top: 315px;
+    left: 50%; /* Dịch chuyển nút đến giữa */
+    transform: translateX(-50%);
+    width: 90%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 25px;
+    display: none;
+
+  }
+
+  .nav-btn.active {
+    display: flex;
+  }
 }
