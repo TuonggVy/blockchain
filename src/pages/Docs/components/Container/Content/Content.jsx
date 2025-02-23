@@ -1,7 +1,13 @@
 import AsideRight from "./AsideRight/AsideRight";
 import styles from "./Content.module.scss";
 import ContentItem from "./ContentItem/ContentItem";
-import { RightOutlined, LeftOutlined } from "@ant-design/icons";
+import {
+  RightOutlined,
+  LeftOutlined,
+  SmileOutlined,
+  MehOutlined,
+  FrownOutlined,
+} from "@ant-design/icons";
 import PropTypes from "prop-types";
 
 function Content({ contentTitle }) {
@@ -174,6 +180,21 @@ function Content({ contentTitle }) {
         {/*Part3 time update content */}
         <div className={styles["content-time-wrap"]}>
           <p>Last updated 4 months ago</p>
+
+          <div className={styles["content-time-footer"]}>
+            <p>Was this helpful</p>
+            <div className={styles["asideRight-footer-icon"]}>
+              <button className={styles["asideRight-footer-icon-single"]}>
+                <SmileOutlined />
+              </button>
+              <button className={styles["asideRight-footer-icon-single"]}>
+                <MehOutlined />
+              </button>
+              <button className={styles["asideRight-footer-icon-single"]}>
+                <FrownOutlined />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

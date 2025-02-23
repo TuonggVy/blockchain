@@ -3,8 +3,10 @@
   flex-direction: column;
   background-color: white;
   height: calc(100vh - 64px);
-  width: calc(100% / 5);
+  width: 320px;
   padding: 24px 0 16px 0;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
   position: sticky;
   top: 64px;
   flex-grow: 0;
@@ -149,5 +151,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .doc-bar {
+    display: none;
   }
 }

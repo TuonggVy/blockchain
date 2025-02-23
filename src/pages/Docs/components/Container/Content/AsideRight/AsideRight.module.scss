@@ -96,3 +96,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 1440px) {
+  .doc-content-aside {
+    display: none;
+  }
+}
