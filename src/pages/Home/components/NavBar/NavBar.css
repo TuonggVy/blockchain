@@ -1,3 +1,10 @@
+html, body {
+  overflow-x: hidden; /* Giữ nguyên */
+  overflow-y: auto; /* Đảm bảo có thể cuộn */
+  height: 100%;
+}
+
+
 .navbar {
   display: flex;
   justify-content: space-around;
