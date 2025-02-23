@@ -1,6 +1,6 @@
 html, body {
-  overflow-x: hidden; /* Giữ nguyên */
-  overflow-y: auto; /* Đảm bảo có thể cuộn */
+  overflow-x: hidden; 
+  overflow-y: auto; 
   height: 100%;
 }
 
