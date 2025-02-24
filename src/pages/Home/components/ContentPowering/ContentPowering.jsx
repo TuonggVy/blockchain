@@ -250,17 +250,23 @@ function Features({ categories, projects }) {
             className="project-card"
             onClick={() => window.open(project.link, "_blank")}
           >
-            <img src={project.name} alt="Project Logo" className="project-logo" />
+            <img
+              src={project.name}
+              alt="Project Logo"
+              className="project-logo"
+            />
             <p className="project-desc">{project.desc}</p>
           </div>
         ))}
       </div>
 
-      {selectedCategory === "All" && (
-        <button className="viewall-btn" onClick={handleViewAll}>
-          View All
-        </button>
-      )}
+      <div className="viewall-container">
+        {selectedCategory === "All" && (
+          <button className="viewall-btn" onClick={handleViewAll}>
+            View All
+          </button>
+        )}
+      </div>
     </section>
   );
 }

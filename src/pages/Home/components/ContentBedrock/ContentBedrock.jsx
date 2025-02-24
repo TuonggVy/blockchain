@@ -4,8 +4,9 @@ import './ContentBedrock.css';
 function ContentBedrock() {
   return (
     <section className='bedrock'>
+        <div className='bedrock-container'>
         <h1 className='title-bedrock'>Bitcoin as Bedrock For Blockchains</h1>
-        <div className='bedrock'>
+        <div className='bedrockk'>
             <div className='bedrock-row1'>
             <div>
                 <img className='image-bedrock' src='https://pbs.twimg.com/profile_images/1251778842886356993/7NcITRG3_400x400.jpg' alt="Modular Icon" />
@@ -33,6 +34,7 @@ function ContentBedrock() {
                 <p className='content-bedrock'>LayerEdge enables a modular future for blockchains with its execution layer that keeps the settlement on Bitcoin leveraging BitVM.</p>
             </div>
             </div>
+        </div>
         </div>
     </section>
   );
