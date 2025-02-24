@@ -14,6 +14,7 @@
         max-width: 1200px; 
         margin: 0 auto; 
         height: 300px;
+        margin-top: 50px;
     }
     
     .logo-section {
@@ -84,4 +85,45 @@
     .social-icons-section a {
         color: inherit;
     }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .footer-content {
+            padding: 20px 50px ;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column; 
+            align-items: flex-start; 
+            text-align: left; 
+            height: auto; 
+            padding: 20px; 
+            padding-bottom: 80px;
+        }
+    
+        .nav-links-section {
+            order: -1; 
+            width: 100%;
+            display: flex;
+            flex-direction: row; 
+            justify-content: flex-start; 
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+    
+        .nav-column {
+            flex: 1; 
+            min-width: 150px; 
+        }
+    
+        .logo-section {
+            width: 100%; 
+            text-align: left; 
+            margin-top: 10px;
+        }
+    }
+    
+    
     
