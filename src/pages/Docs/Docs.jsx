@@ -5,16 +5,21 @@ import Container from "./components/Container/Container";
 
 function Docs() {
   const [openSearch, setOpenSearch] = useState(false);
+  const [openMenuLeft, setOpenMenuLeft] = useState(false);
+
   return (
     <>
       {/*Navbar */}
-      <Navbar setOpenSearch={setOpenSearch} />
+      <Navbar setOpenMenuLeft={setOpenMenuLeft} setOpenSearch={setOpenSearch} />
 
       {/*Search popup */}
       <SearchPopup openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
       {/*Container */}
-      <Container/>
+      <Container
+        setOpenMenuLeft={setOpenMenuLeft}
+        openMenuLeft={openMenuLeft}
+      />
     </>
   );
 }

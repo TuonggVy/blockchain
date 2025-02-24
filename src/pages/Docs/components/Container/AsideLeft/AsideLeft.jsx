@@ -4,7 +4,12 @@ import styles from "./AsideLeft.module.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function AsideLeft({ contentTitle, setContentTitle }) {
+function AsideLeft({
+  setOpenMenuLeft,
+  openMenuLeft,
+  contentTitle,
+  setContentTitle,
+}) {
   const [isOpenItem, setIsOpenItem] = useState(false);
 
   const toggleOpenItem = (e) => {
@@ -92,7 +97,9 @@ function AsideLeft({ contentTitle, setContentTitle }) {
   ];
 
   return (
-    <aside className={styles["doc-bar"]}>
+    <aside
+      className={`${styles["doc-bar"]} ${openMenuLeft ? styles["active"] : ""}`}
+    >
       <div className={styles["doc-bar-content"]}>
         <ul className={styles["doc-bar-content-list"]}>
           {ASIDE_ITEM.map((section, index) => (
@@ -108,6 +115,7 @@ function AsideLeft({ contentTitle, setContentTitle }) {
                     onClick={() => {
                       setContentTitle(item.title);
                       console.log(item.title);
+                      setOpenMenuLeft(false);
                     }}
                     key={index}
                     className={styles["doc-bar-mini-item"]}
@@ -135,6 +143,7 @@ function AsideLeft({ contentTitle, setContentTitle }) {
                       <ul className={styles["doc-bar-mini-list-two"]}>
                         {item.children.map((child, index) => (
                           <AsideItem
+                            setOpenMenuLeft={setOpenMenuLeft}
                             setContentTitle={setContentTitle}
                             isOpenItem={isOpenItem}
                             toggleOpenItem={toggleOpenItem}
@@ -160,6 +169,7 @@ function AsideLeft({ contentTitle, setContentTitle }) {
 }
 
 AsideLeft.propTypes = {
+  openMenuLeft: PropTypes.bool.isRequired,
   contentTitle: PropTypes.string.isRequired,
   setContentTitle: PropTypes.func,
 };

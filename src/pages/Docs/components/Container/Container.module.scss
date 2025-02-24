@@ -8,18 +8,20 @@
   flex-wrap: nowrap;
 }
 
-@media only screen and (max-width: 1280px) {
-
+@media only screen and (max-width: 1024px) {
+  .doc-container {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 850px) {
-  .doc-container{
+  .doc-container {
     padding: 0 24px;
   }
 }
 
 @media only screen and (max-width: 728px) {
-  .doc-container{
+  .doc-container {
     padding: 0 16px;
   }
 }

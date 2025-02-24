@@ -3,7 +3,7 @@ import { RightOutlined } from "@ant-design/icons";
 import styles from "../AsideLeft.module.scss";
 import PropTypes from "prop-types";
 
-function AsideItem({ item, setContentTitle }) {
+function AsideItem({ setOpenMenuLeft, item, setContentTitle }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = (e) => {
@@ -17,6 +17,7 @@ function AsideItem({ item, setContentTitle }) {
         e.stopPropagation();
         setContentTitle(item.title);
         console.log(item.title);
+        setOpenMenuLeft(false);
       }}
       className={styles["doc-bar-mini-item-two"]}
     >
@@ -39,6 +40,7 @@ function AsideItem({ item, setContentTitle }) {
         <ul className={styles["doc-bar-mini-list-two"]}>
           {item.children.map((child, index) => (
             <AsideItem
+              setOpenMenuLeft={setOpenMenuLeft}
               setContentTitle={setContentTitle}
               key={index}
               item={child}
@@ -61,6 +63,7 @@ AsideItem.propTypes = {
     ),
   }).isRequired,
   setContentTitle: PropTypes.func,
+  setOpenMenuLeft: PropTypes.func,
 };
 
 export default AsideItem;

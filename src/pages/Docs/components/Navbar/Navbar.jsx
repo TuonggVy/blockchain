@@ -3,12 +3,16 @@ import styles from "./Navbar.module.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function Navbar({ setOpenSearch }) {
+function Navbar({ setOpenMenuLeft, setOpenSearch }) {
+  const toggleOpenMenuLeft = () => {
+    setOpenMenuLeft((prev) => !prev);
+  };
+
   return (
     <div className={styles["doc-navbar"]}>
       {/*Logo */}
       <div className={styles["doc-logo"]}>
-        <button className={styles["menu-icon"]}>
+        <button onClick={toggleOpenMenuLeft} className={styles["menu-icon"]}>
           <MenuOutlined className={styles["menu-icon-style"]} />
         </button>
         <span>
@@ -43,6 +47,7 @@ function Navbar({ setOpenSearch }) {
 }
 
 Navbar.propTypes = {
+  setOpenMenuLeft: PropTypes.func.isRequired,
   setOpenSearch: PropTypes.func.isRequired,
 };
 

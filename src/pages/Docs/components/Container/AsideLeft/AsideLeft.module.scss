@@ -9,8 +9,6 @@
   flex-shrink: 0 !important;
   position: sticky;
   top: 64px;
-  flex-grow: 0;
-  flex-shrink: 0;
   overflow-x: hidden;
   z-index: 5;
 
@@ -157,5 +155,43 @@
 @media only screen and (max-width: 1280px) {
   .doc-bar {
     display: none;
+    position: unset;
+    border-bottom: 1px solid var(--grey-line-color);
+    height: auto;
+    width: 100%;
+    z-index: 0;
+
+    &.active {
+      display: block;
+    }
+
+    .doc-bar-content {
+      .doc-bar-content-list {
+        row-gap: 20px;
+
+        .doc-bar-content-item{
+          .doc-bar-content-heading{
+            font-size: 14px;
+          }
+          .doc-bar-mini-list{
+            row-gap: 2px;
+            .doc-bar-mini-item{
+              .doc-bar-mini-item-p{
+                font-size: 14px;
+              }
+
+              .doc-bar-mini-list-two{
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      .doc-bar-footer {
+        position: unset;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
   }
 }
