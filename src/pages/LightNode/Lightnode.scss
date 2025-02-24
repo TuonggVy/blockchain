@@ -230,19 +230,7 @@ $inactive-text: #777;
 // Responsive
 @media (max-width: 1024px) {
   .sidebar {
-    display: none; // Ẩn sidebar trên màn hình nhỏ
-  }
-
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #000; // Đảm bảo nhìn thấy logo
+    display: none; 
   }
 
   .logo {
