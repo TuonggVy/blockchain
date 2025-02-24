@@ -1,8 +1,20 @@
-import { BookOutlined, CodeSandboxOutlined, DiscordOutlined, GithubOutlined, LinuxOutlined, SearchOutlined, XOutlined } from "@ant-design/icons";
+import {
+  BookOutlined,
+  CloseOutlined,
+  CodeSandboxOutlined,
+  DiscordOutlined,
+  GithubOutlined,
+  LinuxOutlined,
+  MenuOutlined,
+  SearchOutlined,
+  XOutlined,
+} from "@ant-design/icons";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <header>
       <div className={styles["header-wrap"]}>
@@ -70,6 +82,27 @@ function Header() {
               </div>
             </div>
           </div>
+
+          {openMenu == false ? (
+            <MenuOutlined
+              className={styles["menu-icon"]}
+              onClick={() => setOpenMenu(true)}
+            />
+          ) : (
+            <CloseOutlined
+              className={styles["menu-icon"]}
+              onClick={() => setOpenMenu(false)}
+            />
+          )}
+
+          {openMenu && (
+            <div className={styles["menu-open"]}>
+              <ul>
+                <li>Batches</li>
+                <li>Testnet</li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </header>

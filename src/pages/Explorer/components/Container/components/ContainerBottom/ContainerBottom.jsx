@@ -90,7 +90,7 @@ function ContainerBottom() {
         </ul>
 
         <Pagination
-        itemPerPage={itemPerPage}
+          itemPerPage={itemPerPage}
           totalItems={BATCHES_DATA.length}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

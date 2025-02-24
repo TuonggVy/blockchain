@@ -79,3 +79,59 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .container-main {
+    background-color: black;
+
+    .container-box-list {
+      background-color: black;
+      flex-direction: column;
+      align-items: center;
+      justify-content: unset;
+      padding: 0;
+      gap: 20px;
+
+      .container-box {
+        background-color: black;
+        padding: 12px;
+        width: 100%;
+        height: auto;
+
+        &:nth-child(2),
+        &:last-child {
+          flex-direction: unset;
+          text-align: unset;
+        }
+
+        .container-box-number {
+          font-size: 30px;
+        }
+        .container-box-number-type {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .container-protocols {
+      flex-direction: column;
+      margin: 20px 0;
+      margin-bottom: 0;
+
+      span{
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .protocals-logo{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

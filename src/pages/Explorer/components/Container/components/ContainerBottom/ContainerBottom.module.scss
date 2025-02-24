@@ -1,63 +1,85 @@
 .container-bottom {
+  background-color: black;
+
+  .container-bottom-header {
+    padding: 24px;
+    margin: 0 243px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(31, 31, 31);
+    color: var(--text-color-grey);
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .header-time {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .container-bottom-content {
+    margin: 0 243px;
+    padding: 33px;
+    border: 1px solid rgb(31, 31, 31);
+
+    .list-batch {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      .each-batch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        padding: 20px 8px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          border: 1px solid gray;
+          scale: 1.01;
+        }
+
+        p {
+          color: white;
+          font-size: 18px;
+        }
+
+        span {
+          color: var(--text-color-grey);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-bottom {
     background-color: black;
 
     .container-bottom-header {
-      padding: 24px;
-      margin: 0 243px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: 1px solid rgb(31, 31, 31);
-      color: var(--text-color-grey);
+      margin: 0;
+      padding: 20px 16px;
 
       h2 {
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 16px;
       }
 
       .header-time {
-        display: flex;
-        gap: 1rem;
+        font-size: 14px;
       }
     }
 
-    .container-bottom-content {
-      margin: 0 243px;
-      padding: 33px;
-      border: 1px solid rgb(31, 31, 31);
-
-      .list-batch {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-
-        .each-batch {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          background-color: black;
-          padding: 20px 8px;
-          cursor: pointer;
-          border: 1px solid transparent;
-          transition: 0.2s ease-in-out;
-
-          &:hover {
-            border: 1px solid gray;
-            scale: 1.01;
-          }
-
-          p {
-            color: white;
-            font-size: 18px;
-          }
-
-          span {
-            color: var(--text-color-grey);
-          }
-        }
-      }
-
-      
+    .container-bottom-content{
+      margin: 0;
+      padding: 20px 16px;
     }
   }
+}
