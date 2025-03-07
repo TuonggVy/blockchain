@@ -3,7 +3,7 @@ import styles from "./ContainerBottom.module.scss";
 import { useState } from "react";
 import Pagination from "../../../../../../component/Pagination/Pagination";
 
-function ContainerBottom() {
+function ContainerBottom({setBatchDetail}) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemPerPage = 5;
 
@@ -80,7 +80,11 @@ function ContainerBottom() {
       <div className={styles["container-bottom-content"]}>
         <ul className={styles["list-batch"]}>
           {currentItem.map((batch) => (
-            <li key={batch.id} className={styles["each-batch"]}>
+            <li
+              key={batch.id}
+              className={styles["each-batch"]}
+              onClick={() => setBatchDetail(true)}
+            >
               <p>{batch.name}</p>
               <span>
                 <ArrowRightOutlined />
