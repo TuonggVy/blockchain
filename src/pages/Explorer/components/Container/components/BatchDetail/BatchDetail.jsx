@@ -46,7 +46,7 @@ function BatchDetail({ setBatchDetail }) {
         <div className={styles["single-detail"]}>
           <p className={styles["name"]}>Batch Hash:</p>
           <p className={styles["value"]}>
-            2E3F04F7CBE1047BC3626C0CBC2D761B4289D0E8439A1FD6BC5946EB36C955F0
+            <span>2E3F04F7CBE1047BC3626C0CBC2D761B4289D0E8439A1FD6BC5946EB36C955F0</span>
             <span>
               <CopyOutlined />
             </span>
@@ -55,7 +55,7 @@ function BatchDetail({ setBatchDetail }) {
         <div className={styles["single-detail"]}>
           <p className={styles["name"]}>Batch Sender Address:</p>
           <p className={styles["value"]}>
-            cosmos1uuhr5kleawdryk3fehunyk8ezav2zzn8d6fj5j
+            <span>cosmos1uuhr5kleawdryk3fehunyk8ezav2zzn8d6fj5j</span>
             <span>
               <CopyOutlined />
             </span>
@@ -89,7 +89,7 @@ function BatchDetail({ setBatchDetail }) {
         <div className={styles["single-footer-item"]}>
           <p className={styles["footer-name"]}>Submission Transaction Hash:</p>
           <p className={styles["footer-value"]}>
-            2E3F04F7CBE1047BC3626C0CBC2D761B4289D0E8439A1FD6BC5946EB36C955F0{" "}
+            <span>2E3F04F7CBE1047BC3626C0CBC2D761B4289D0E8439A1FD6BC5946EB36C955F0</span>
             <span>
               <RiseOutlined />
             </span>
@@ -98,7 +98,7 @@ function BatchDetail({ setBatchDetail }) {
         <div className={styles["single-footer-item"]}>
           <p className={styles["footer-name"]}>Submission Block Number:</p>
           <p className={styles["footer-value"]}>
-            Confirming...{" "}
+            Confirming...
             <span>
               <RiseOutlined />
             </span>
