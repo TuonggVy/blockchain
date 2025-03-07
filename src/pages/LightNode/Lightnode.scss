@@ -4,54 +4,49 @@ $sidebar-bg: #010101;
 $primary-color: #2563eb;
 $text-color: #fff;
 $inactive-text: #777;
+$border-color: #1f1f1f;
 
 .dashboard-container {
-    display: flex;
-    height: 100vh;
-    background-color: #000;
-  
-    .sidebar-wrapper {
-      display: flex;
-      background-color: #111;
-  
-      .separator {
-        width: 1px;
-        background: #1f1f1f;
-      }
-    }
-  
-    .content {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #000;
-    }
+  display: flex;
+  height: 100vh;
+  background-color: $bg-color;
 
-    .top-right {
-      position: absolute;
-      top: 50px;
-      right: 50px;
-    
-      .connect-wallet-btn {
-        background: transparent;
+  .sidebar-wrapper {
+    display: flex;
+    background-color: $sidebar-bg;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
+    position: relative;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    .connect-wallet-btn {
+      background: transparent;
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+      
+      &:hover {
+        background: #202020;
         color: white;
-        padding: 8px 15px;
-        border: 1px solid white;
-        border-radius: 20px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.3s;
-    
-        &:hover {
-          background: #202020;
-          color: white;
-        }
       }
     }
-    
   }
-  
+}
 
 // Sidebar
 .sidebar {
@@ -61,168 +56,117 @@ $inactive-text: #777;
   padding: 20px;
   display: flex;
   flex-direction: column;
-//   justify-content: space-between;
 
   .logo {
     font-size: 28px;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
     color: $inactive-text;
+    text-align: center;
     margin-top: 20px;
+
+    span {
+      color: white;
+    }
+
     small {
       font-size: 12px;
-      font-weight: lighter;
       color: $inactive-text;
     }
   }
 
-  ul {
+  .menu-items {
     list-style: none;
     padding: 0;
     margin-top: 30px;
+
     li {
-      margin: 10px 0px;
       display: flex;
       align-items: center;
-    //   padding: 10px 0;
-      padding: 18px 0px;
-      padding-left: 15px;
-      padding-right: 18px;
-      border: 1px solid transparent; 
+      padding: 18px 15px;
       border-radius: 30px;
-      box-sizing: border-box; 
       font-size: 18px;
       font-weight: lighter;
       color: $inactive-text;
       cursor: pointer;
+      transition: background 0.3s ease;
 
       &:hover,
       &.active {
         color: $text-color;
-        color: $text-color;
-        border-color: #1f1f1f; 
-        background-color: #010101 
+        background-color: #111;
       }
 
       svg {
         margin-right: 10px;
       }
 
-      .lock-icon {
+      .new-tag {
         margin-left: auto;
+        font-size: 12px;
+        color: $primary-color;
       }
     }
   }
 
   .bottom-links {
-    margin-top: 150px;
+    margin-top: 100px;
   
     p {
-      margin: 10px 0px;
       color: $text-color;
       cursor: pointer;
-      padding: 18px 0px;
-      padding-left: 15px;
-      padding-right: 18px;
-      border: 1px solid transparent; 
+      padding: 15px;
       border-radius: 30px;
-      box-sizing: border-box; 
+      transition: background 0.3s ease;
   
       &:hover {
-        color: $text-color;
-        border-color: #1f1f1f; 
-        background-color: #010101 
+        background-color: #111;
       }
     }
   }
 }
 
-// Wallet Connect Box
-.content {
-  flex: 1;
+// Light Client Box
+.light-client-box {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.wallet-container {
   background: #131313;
-  border: 1px solid #1f1f1f;
-  padding: 30px;
+  border: 1px solid $border-color;
+  padding: 20px;
   border-radius: 10px;
-  text-align: center;
   color: $text-color;
-  width: 400px;
+  width: 550px;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 
-  h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
+  .icon {
+    width: 40px;
+    height: 40px;
+    background: url('') no-repeat center;
+    background-size: contain;
   }
 
-  p {
-    font-size: 15px;
-    color: $inactive-text;
-    margin-bottom: 20px;
+  .text-content {
+    flex-grow: 1;
+    padding: 0 20px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 
-  .connect-btn {
-    background: $primary-color;
-    color: $text-color;
+  .start-now-btn {
+    background: transparent;
+    color: white;
     padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 14px;
     cursor: pointer;
-    width: 100%;
+    transition: 0.3s;
 
     &:hover {
-        background: #4d85ff;
-    }
-  }
-
-  .steps {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-
-    .step {
-      width: 25px;
-      height: 25px;
-      background: $inactive-text;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $text-color;
-      font-size: 14px;
-      font-weight: bold;
-
-      &.active {
-        background: $primary-color;
-      }
-    }
-
-    .line {
-      width: 40px;
-      height: 2px;
-      background: $inactive-text;
-      margin: 0 10px;
-    }
-
-    .step2 {
-      width: 25px;
-      height: 25px;
-      background: #131313;
-      border: 1px solid $primary-color;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $primary-color;
-      font-size: 14px;
-      font-weight: bold;
+      background: #202020;
     }
   }
 }
@@ -235,7 +179,6 @@ $inactive-text: #777;
 
   .logo {
     font-size: 24px;
-    font-weight: bold;
     color: white;
   }
 
@@ -244,11 +187,4 @@ $inactive-text: #777;
     align-items: center;
     gap: 15px;
   }
-
-  .menu-icon {
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
 }
-

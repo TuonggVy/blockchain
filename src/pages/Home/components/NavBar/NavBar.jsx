@@ -7,10 +7,13 @@ import {
 } from "@ant-design/icons";
 import React, { useState } from "react";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function NavBar() {
+  const navigate = useNavigate();
+
   const handleLightNode = () => {
-    window.open("/lightnode", "_blank");
+    // window.open("/lightnode", "_blank");
+    navigate("/lightnode");
   };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
