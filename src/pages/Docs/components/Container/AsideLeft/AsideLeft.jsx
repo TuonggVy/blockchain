@@ -29,14 +29,6 @@ function AsideLeft({
               children: [
                 {
                   title: "Aggregation",
-                  children: [
-                    {
-                      title: "Aggregation",
-                    },
-                    {
-                      title: "Built on Babylon",
-                    },
-                  ],
                 },
                 {
                   title: "Built on Babylon",

@@ -7,7 +7,7 @@ function ContentItem({ section, level }) {
   return (
     <>
       <HeadingTag>{section.title}</HeadingTag>
-      {section.para.map((eachPara, index) => (
+      {section.para?.map((eachPara, index) => (
         <p key={index}>{eachPara}</p>
       ))}
       {section.note && (
@@ -18,13 +18,9 @@ function ContentItem({ section, level }) {
           </div>
         </div>
       )}
-      {section.children && (
-        <>
-          {section.children.map((child, index) => (
-            <ContentItem key={index} section={child} level={level + 1} />
-          ))}
-        </>
-      )}
+      {section.children?.map((child, index) => (
+        <ContentItem key={index} section={child} level={level + 1} />
+      ))}
     </>
   );
 }

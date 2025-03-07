@@ -12,46 +12,37 @@ import PropTypes from "prop-types";
 import { DOCS_CONTENT } from "./DOCS_CONTENT";
 
 function Content({ contentTitle }) {
-  console.log(contentTitle);
+  const selectedSection = DOCS_CONTENT.find(
+    (section) => section.heading.toLowerCase() === contentTitle.toLowerCase()
+  );
+
+  if (!selectedSection) {
+    return <p>Content not found</p>;
+  }
+
   return (
     <div className={styles["doc-content"]}>
       <AsideRight contentTitle={contentTitle} docData={DOCS_CONTENT} />
 
       <div className={styles["doc-content-main"]}>
         {/*Header */}
-        {DOCS_CONTENT.find(
-          (section) =>
-            section.heading.toLowerCase() === contentTitle.toLowerCase()
-        ) && (
-          <div>
-            <div className={styles["heading"]}>
-              <p>Introduction</p>
-              <h1>
-                {
-                  DOCS_CONTENT.find(
-                    (section) =>
-                      section.heading.toLowerCase() ===
-                      contentTitle.toLowerCase()
-                  ).heading
-                }
-              </h1>
-            </div>
+        <div>
+          <div className={styles["heading"]}>
+            <p>Introduction</p>
+            <h1>{selectedSection.heading}</h1>
+          </div>
 
-            {/*Part1 content-para*/}
-            <div className={styles["content-para-list"]}>
-              <div className={styles["content-para-item"]}>
-                {DOCS_CONTENT.find(
-                  (section) =>
-                    section.heading.toLowerCase() === contentTitle.toLowerCase()
-                ).children.map((item, index) => (
-                  <div key={index} className={styles["content-para-item-wrap"]}>
-                    <ContentItem section={item} level={2} />
-                  </div>
-                ))}
-              </div>
+          {/* Part1 content-para */}
+          <div className={styles["content-para-list"]}>
+            <div className={styles["content-para-item"]}>
+              {selectedSection.children?.map((item, index) => (
+                <div key={index} className={styles["content-para-item-wrap"]}>
+                  <ContentItem section={item} level={2} />
+                </div>
+              ))}
             </div>
           </div>
-        )}
+        </div>
 
         {/*Part2 next-prev subject*/}
         <div className={styles["content-next-prev-wrap"]}>
@@ -111,3 +102,44 @@ Content.propTypes = {
 };
 
 export default Content;
+
+{
+  /* {DOCS_CONTENT.find(
+          (section) =>
+            section.heading.toLowerCase() === contentTitle.toLowerCase()
+        ) && ( */
+}
+// <div>
+
+{
+  /* <div className={styles["heading"]}>
+              <p>Introduction</p>
+              <h1>
+                {
+                  DOCS_CONTENT.find(
+                    (section) =>
+                      section.heading.toLowerCase() ===
+                      contentTitle.toLowerCase()
+                  ).heading
+                }
+              </h1>
+            </div>
+
+            {/*Part1 content-para*/
+}
+// <div className={styles["content-para-list"]}>
+//   <div className={styles["content-para-item"]}>
+//     {DOCS_CONTENT.find(
+//       (section) =>
+//         section.heading.toLowerCase() === contentTitle.toLowerCase()
+//     ).children.map((item, index) => (
+//       <div key={index} className={styles["content-para-item-wrap"]}>
+//         <ContentItem section={item} level={2} />
+//       </div>
+//     ))}
+//   </div>
+// </div> */}
+
+{
+  /* )} */
+}
