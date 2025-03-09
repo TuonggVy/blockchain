@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 function Dashboard() {
   return (
     //combine sidebar và liên kết ví
-   <div className="dashboard-container">
+    <div className="dashboard-container">
       {/* Sidebar */}
       <div className="sidebar-wrapper">
         <Sidebar />
@@ -15,8 +15,14 @@ function Dashboard() {
       {/* Nội dung chính */}
       <div className="content">
         {/* Nút Connect Wallet */}
+        <div class="top-left">
+          <div class="logo-re">
+            Layer<span>Edge</span> <small>Beta</small>
+          </div>
+        </div>
         <div className="top-right">
           <button className="connect-wallet-btn">Connect Wallet</button>
+          <div class="menu-icon">☰</div>
         </div>
 
         {/* Phần "Run a light client" */}

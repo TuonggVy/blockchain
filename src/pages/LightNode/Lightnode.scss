@@ -103,7 +103,7 @@ $border-color: #1f1f1f;
       .new-tag {
         margin-left: auto;
         font-size: 12px;
-        color: $primary-color;
+        color: white;
       }
     }
   }
@@ -172,15 +172,39 @@ $border-color: #1f1f1f;
   }
 }
 
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo-re {
+  display: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+
+  span {
+    color: white; // Hoặc màu khác tùy theo thiết kế
+  }
+
+  small {
+    font-size: 12px;
+    color: #777;
+  }
+}
+
 // Responsive
 @media (max-width: 1024px) {
   .sidebar {
     display: none; 
   }
 
-  .logo {
+  .logo-re {
+    display: block;
     font-size: 24px;
     color: white;
+    margin-top: 27px;
   }
 
   .top-right {
@@ -188,4 +212,58 @@ $border-color: #1f1f1f;
     align-items: center;
     gap: 15px;
   }
+  .menu-icon {
+    font-size: 24px; // Kích thước icon
+    color: white;
+    cursor: pointer;
+  }
 }
+
+@media (max-width: 430px) {
+  .light-client-box {
+    width: 90%; // Điều chỉnh để vừa với màn hình
+    flex-direction: column; // Chuyển sang layout dọc
+    text-align: center; // Căn giữa nội dung
+    padding: 20px;
+    
+
+    .text-content {
+      padding: 10px 0;
+      
+      h3 {
+        font-size: 14px; // Giảm kích thước chữ để không bị tràn
+        font-weight: bold; // Theo ảnh là chữ đậm
+      }
+    }
+
+    .start-now-btn {
+      width: 100%; // Nút chiếm hết chiều rộng
+      max-width: 200px;
+    }
+  }
+
+  .top-right {
+    top: 20px;
+    right: 20px;
+    gap: 10px;
+
+    .menu-icon {
+      font-size: 20px;
+    }
+    
+    .connect-wallet-btn {
+      padding: 8px 15px; // Giảm padding để phù hợp mobile
+      font-size: 13px;
+    }
+  }
+
+  .top-left {
+    top: 15px;
+    left: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
