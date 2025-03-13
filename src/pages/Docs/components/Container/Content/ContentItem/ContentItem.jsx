@@ -27,12 +27,12 @@ function ContentItem({ section, level }) {
 
 ContentItem.propTypes = {
   section: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     para: PropTypes.arrayOf(string),
     note: PropTypes.string,
     children: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        title: PropTypes.string,
         children: PropTypes.array,
       })
     ),

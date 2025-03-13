@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RightOutlined } from "@ant-design/icons";
 import styles from "../AsideLeft.module.scss";
 import PropTypes from "prop-types";
+import { DocsContext } from "../../../../../../context/DocsContext";
 
-function AsideItem({ setOpenMenuLeft, item, setContentTitle }) {
+function AsideItem({ setOpenMenuLeft, item }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { setContent } = useContext(DocsContext);
 
   const toggleOpen = (e) => {
     e.stopPropagation();
@@ -15,7 +17,7 @@ function AsideItem({ setOpenMenuLeft, item, setContentTitle }) {
     <li
       onClick={(e) => {
         e.stopPropagation();
-        setContentTitle(item.title);
+        setContent(item.title);
         console.log(item.title);
         setOpenMenuLeft(false);
       }}
@@ -41,7 +43,6 @@ function AsideItem({ setOpenMenuLeft, item, setContentTitle }) {
           {item.children.map((child, index) => (
             <AsideItem
               setOpenMenuLeft={setOpenMenuLeft}
-              setContentTitle={setContentTitle}
               key={index}
               item={child}
             />
@@ -62,7 +63,6 @@ AsideItem.propTypes = {
       })
     ),
   }).isRequired,
-  setContentTitle: PropTypes.func,
   setOpenMenuLeft: PropTypes.func,
 };
 

@@ -8,21 +8,38 @@ import {
   MehOutlined,
   FrownOutlined,
 } from "@ant-design/icons";
-import PropTypes from "prop-types";
 import { DOCS_CONTENT } from "./DOCS_CONTENT";
+import { useContext } from "react";
+import { DocsContext } from "../../../../../context/DocsContext";
 
-function Content({ contentTitle }) {
-  const selectedSection = DOCS_CONTENT.find(
-    (section) => section.heading.toLowerCase() === contentTitle.toLowerCase()
+function Content() {
+  const { content, setContent } = useContext(DocsContext);
+
+  const currentIndex = DOCS_CONTENT.findIndex(
+    (section) => section.heading.toLowerCase() === content.toLowerCase()
   );
+
+  const selectedSection = DOCS_CONTENT[currentIndex];
 
   if (!selectedSection) {
     return <p>Content not found</p>;
   }
 
+  const previousHeading = () => {
+    if (currentIndex > 0) {
+      setContent(DOCS_CONTENT[currentIndex - 1].heading);
+    }
+  };
+
+  const nextHeading = () => {
+    if (currentIndex < DOCS_CONTENT.length - 1) {
+      setContent(DOCS_CONTENT[currentIndex + 1].heading);
+    }
+  };
+
   return (
     <div className={styles["doc-content"]}>
-      <AsideRight contentTitle={contentTitle} docData={DOCS_CONTENT} />
+      <AsideRight content={content} docData={DOCS_CONTENT} />
 
       <div className={styles["doc-content-main"]}>
         {/*Header */}
@@ -46,25 +63,31 @@ function Content({ contentTitle }) {
 
         {/*Part2 next-prev subject*/}
         <div className={styles["content-next-prev-wrap"]}>
-          {contentTitle.trim().toLowerCase() !==
+          {content.trim().toLowerCase() !==
           DOCS_CONTENT[0].heading.trim().toLowerCase() ? (
-            <div className={styles["content-prev-single"]}>
+            <div
+              className={styles["content-prev-single"]}
+              onClick={previousHeading}
+            >
               <LeftOutlined className={styles["prev-icon"]} />
               <p>
                 <span>Previous</span>
-                <span>Proof Aggregation Layer</span>
+                <span>{DOCS_CONTENT[currentIndex - 1].heading}</span>
               </p>
             </div>
           ) : (
             <></>
           )}
 
-          {contentTitle !==
+          {content !==
           "Light Node Verification via Stochastic Sampling of Proofs" ? (
-            <div className={styles["content-next-single"]}>
+            <div
+              className={styles["content-next-single"]}
+              onClick={nextHeading}
+            >
               <p>
                 <span>Next</span>
-                <span>Proof Aggregation Layer</span>
+                <span>{DOCS_CONTENT[currentIndex + 1].heading}</span>
               </p>
               <RightOutlined className={styles["next-icon"]} />
             </div>
@@ -96,10 +119,6 @@ function Content({ contentTitle }) {
     </div>
   );
 }
-
-Content.propTypes = {
-  contentTitle: PropTypes.string.isRequired,
-};
 
 export default Content;
 

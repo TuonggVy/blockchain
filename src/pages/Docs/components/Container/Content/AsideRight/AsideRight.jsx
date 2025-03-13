@@ -1,22 +1,24 @@
 import { FrownOutlined, MehOutlined, SmileOutlined } from "@ant-design/icons";
 import styles from "./AsideRight.module.scss";
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { DocsContext } from "../../../../../../context/DocsContext";
 
-function AsideRight({ contentTitle, docData }) {
+function AsideRight({ docData }) {
+  const { content } = useContext(DocsContext);
+
   const reRender = (items) => {
     return (
       <ul className={styles["doc-asideRight-list"]}>
         {items.map((item, subIndex) => (
-          <>
-            <li key={subIndex} className={styles["doc-asideRight-item"]}>
-              {item.title}
-            </li>
+          <div key={subIndex}>
+            <li className={styles["doc-asideRight-item"]}>{item.title}</li>
             {item.children && Array.isArray(item.children) && (
               <div className={styles["doc-asideRight-children"]}>
                 {reRender(item.children)}
               </div>
             )}
-          </>
+          </div>
         ))}
       </ul>
     );
@@ -26,7 +28,7 @@ function AsideRight({ contentTitle, docData }) {
     <aside className={styles["doc-content-aside"]}>
       <div className={styles["doc-asideRight-wrap"]}>
         {docData.map((section, index) => {
-          if (section.heading.toLowerCase() === contentTitle.toLowerCase()) {
+          if (section.heading.toLowerCase() === content.toLowerCase()) {
             return (
               <div key={index}>
                 {section.children && reRender(section.children)}
@@ -61,13 +63,12 @@ AsideRight.propTypes = {
       heading: PropTypes.string.isRequired,
       children: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string.isRequired,
+          title: PropTypes.string,
           children: PropTypes.array,
         })
       ),
     })
   ).isRequired,
-  contentTitle: PropTypes.string.isRequired,
 };
 
 export default AsideRight;
