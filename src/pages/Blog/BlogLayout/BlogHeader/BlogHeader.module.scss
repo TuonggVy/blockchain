@@ -1,5 +1,5 @@
 .wrap {
-  background-color: red;
+  background-color: white;
   height: 65px;
   position: fixed;
   top: 0;
@@ -9,7 +9,27 @@
   .container {
     width: 1032px;
     height: 100%;
-    background-color: aqua;
+    background-color: white;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      color: #737171;
+
+      span {
+        margin-right: 16px;
+      }
+
+      button {
+        padding: 0 16px;
+        height: 37px;
+        cursor: pointer;
+        border: 1px solid #737171;
+        background-color: white;
+        border-radius: 20px;
+      }
+    }
   }
 }
