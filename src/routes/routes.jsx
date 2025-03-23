@@ -1,3 +1,4 @@
+import Blog from "../pages/Blog/Blog";
 import Docs from "../pages/Docs/Docs";
 import Ecosystem from "../pages/Ecosystem/Ecosystem";
 import Explorer from "../pages/Explorer/Explorer";
@@ -23,8 +24,16 @@ export const publicRoutes = [
     path: "/explorer",
     component: Explorer,
   },
-  { 
-    path: "/lightnode", 
-    component: Dashboard, 
+  {
+    path: "/lightnode",
+    component: Dashboard,
+  },
+  {
+    path: "/blog",
+    component: Blog,
+  },
+  {
+    path: "/blog/:content",
+    component: Blog,
   },
 ];

@@ -1,0 +1,15 @@
+.wrap {
+  background-color: red;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-right: 15px;
+  .container {
+    width: 1032px;
+    height: 100%;
+    background-color: aqua;
+    margin: 0 auto;
+  }
+}
