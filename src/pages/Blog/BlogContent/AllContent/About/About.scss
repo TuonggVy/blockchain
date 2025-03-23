@@ -1,0 +1,114 @@
+.medium-page {
+    font-family: Arial, sans-serif;
+    max-width: 2000px;
+    margin: 0 190px;
+  }
+
+  .header-about {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 190px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  .logo-about {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+
+  .sign-in {
+    border: none;
+    background-color: white;
+  }
+
+  .get-started {
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  .about {
+    margin-top: 116px;
+    display: flex;
+  }
+  .note {
+    margin-top: 0px;
+
+  }
+  .editors {
+    margin-top: 0px;
+
+  }
+  
+  .about, .note, .editors, .writers {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo-box {
+    font-size: 30px;
+    font-weight: bold;
+    background: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .editor-card, .writer-card {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .follow {
+    margin-left: auto;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background: none;
+    border-radius: 25px;
+  }
+  .text {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    .medium-page {
+    margin: 0 ;
+
+    }
+
+    .header-about {
+    margin: 0 16px ;
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    .medium-page {
+    margin: 0 ;
+
+    }
+
+    .header-about {
+    margin: 0 16px ;
+
+    }
+  }

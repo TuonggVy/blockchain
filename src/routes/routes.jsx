@@ -1,4 +1,5 @@
 import Blog from "../pages/Blog/Blog";
+import About from "../pages/Blog/BlogContent/AllContent/About/About";
 import Docs from "../pages/Docs/Docs";
 import Ecosystem from "../pages/Ecosystem/Ecosystem";
 import Explorer from "../pages/Explorer/Explorer";
@@ -35,5 +36,9 @@ export const publicRoutes = [
   {
     path: "/blog/:content",
     component: Blog,
+  },
+  {
+    path: "/blog/about",
+    component: About,
   },
 ];
