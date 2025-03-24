@@ -23,10 +23,15 @@ function ContentHeader() {
           </p>
 
           <p>
-            Published in <span style={{ color: "black" }}>LayerEdge</span> · 3
+            Published in <span style={{ color: "black" }}>LayerEdge</span> <br className={styles['break']}/>· 3
             min read · Mar 7, 2025
           </p>
         </div>
+      </div>
+
+      <div className={styles["sub-content-header-respo"]}>
+        <p><PlayCircleOutlined /> Listen</p>
+        <p><UploadOutlined /> Share</p>
       </div>
 
       <div className={styles["sub-content-header-wrap"]}>

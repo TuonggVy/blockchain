@@ -6,7 +6,13 @@
   right: 0;
   border-bottom: 2px solid grey;
   background-color: white;
+  @media (max-width: 768px) {
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .header-responsive,
   .container {
     height: 100%;
     padding: 0 24px;
@@ -28,6 +34,9 @@
         padding: 10px 20px 10px 0;
         display: flex;
         align-items: center;
+        @media (max-width: 768px) {
+          display: none;
+        }
 
         .search-icon {
           font-size: 24px;
@@ -49,11 +58,17 @@
       gap: 16px;
       .write-wrap {
         color: grey;
+        @media (max-width: 768px) {
+          display: none;
+        }
         span {
           margin-left: 8px;
         }
       }
       .sign-in-wrap {
+        @media (max-width: 768px) {
+          display: none;
+        }
         span {
           background-color: grey;
           padding: 5px 12px;
@@ -79,16 +94,66 @@
         }
       }
       .user-wrap {
-        width: 32px;
-        height: 32px;
-        font-size: 24px;
-        text-align: center;
-        line-height: 32px;
-        cursor: pointer;
-        color: grey;
-        border: 1px solid lightgray;
-        border-radius: 20px;
+        @media (max-width: 768px) {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .user-icon {
+          width: 32px;
+          height: 32px;
+          font-size: 24px;
+          text-align: center;
+          line-height: 32px;
+          cursor: pointer;
+          color: grey;
+          border: 1px solid lightgray;
+          border-radius: 20px;
+        }
+
+        .icon-search {
+          display: none;
+
+          @media (max-width: 768px) {
+            display: block;
+            font-size: 22px;
+          }
+        }
       }
+    }
+  }
+
+  .header-responsive {
+    display: none;
+    .sign-in-wrap {
+      span {
+        background-color: grey;
+        padding: 5px 12px;
+        border-radius: 20px;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:first-child {
+          &:hover {
+            background-color: rgb(84, 84, 84);
+          }
+        }
+
+        &:last-child {
+          background-color: white;
+          color: gray;
+
+          &:hover {
+            color: rgb(84, 84, 84);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      border-bottom: 1px solid lightgray;
     }
   }
 }

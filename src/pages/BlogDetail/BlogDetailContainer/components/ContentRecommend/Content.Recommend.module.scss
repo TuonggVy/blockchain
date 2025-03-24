@@ -1,15 +1,28 @@
 .wrap {
   padding: 72px 0;
   background-color: rgb(237, 237, 237);
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
 
   .container {
     .medium-wrap,
     .layeredge-wrap {
       width: 680px;
       margin: 0 auto;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 0 24px;
+      }
+
       h4 {
         font-size: 24px;
         margin: 16px 0 48px 0;
+
+        @media (max-width: 768px) {
+          margin: 12px 0 32px 0;
+        }
       }
 
       .recommend-list {
@@ -20,6 +33,12 @@
         padding-bottom: 56px;
         border-bottom: 1px solid lightgray;
         margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(1, 1fr);
+          row-gap: 40px;
+          padding-bottom: 26px;
+        }
 
         .recommend-box {
           img {
@@ -94,6 +113,10 @@
         background-color: transparent;
         cursor: pointer;
         margin-bottom: 96px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 46px;
+        }
       }
     }
 
@@ -102,8 +125,17 @@
       margin: 0 auto;
       margin-top: 88px;
 
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 0 24px;
+        margin-top: 40px;
+      }
+
       button {
         margin-bottom: 96px !important;
+        @media (max-width: 768px) {
+          margin-bottom: 26px !important;
+        }
       }
     }
   }

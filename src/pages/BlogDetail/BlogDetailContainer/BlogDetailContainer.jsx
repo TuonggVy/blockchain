@@ -9,9 +9,14 @@ function BlogDetailContainer() {
     <div className={styles.wrap}>
       <div className={styles["header-wrap"]}>
         <div className={styles["header-content"]}>
+
           <span>
             <a href="http://layeredge.com">LayerEdge</a>
           </span>
+          <span className={styles['sub-nav']}>
+            Follow publication
+          </span>
+
           <ul>
             <li>
               <a href="http://localhost:5173/blog">Home</a>

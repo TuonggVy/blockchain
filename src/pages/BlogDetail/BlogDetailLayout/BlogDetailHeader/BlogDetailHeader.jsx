@@ -4,6 +4,15 @@ import { FormOutlined, SearchOutlined, UserOutlined } from "@ant-design/icons";
 function BlogDetailHeader() {
   return (
     <div className={styles.wrap}>
+      {/*Responsive header */}
+      <div className={styles["header-responsive"]}>
+        <p>Open in app</p>
+        <div className={styles["sign-in-wrap"]}>
+          <span>Sign in</span>
+          <span>Sign up</span>
+        </div>
+      </div>
+      {/*End responsive header */}
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.logo}>
@@ -24,7 +33,7 @@ function BlogDetailHeader() {
 
         <div className={styles.right}>
           <div className={styles["write-wrap"]}>
-            <FormOutlined style={{fontSize: '20px'}} />
+            <FormOutlined style={{ fontSize: "20px" }} />
             <span>Write</span>
           </div>
 
@@ -34,7 +43,10 @@ function BlogDetailHeader() {
           </div>
 
           <div className={styles["user-wrap"]}>
-            <UserOutlined />
+            <SearchOutlined className={styles["icon-search"]} />
+            <p className={styles["user-icon"]}>
+              <UserOutlined />
+            </p>
           </div>
         </div>
       </div>

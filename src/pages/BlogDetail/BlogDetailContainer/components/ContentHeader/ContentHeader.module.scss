@@ -2,6 +2,11 @@
   h1 {
     font-size: 42px;
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   .author-blog-info-wrap {
@@ -28,8 +33,30 @@
         &:last-child {
           color: gray;
           font-size: 14px;
+
+          .break {
+            display: none;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+          }
         }
       }
+    }
+  }
+
+  .sub-content-header-respo {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    p{
+      height: 38px;
+      padding: 0 16px 0 12px;
+      border: 1px solid lightgray;
+      border-radius: 20px;
+      line-height: 38px;
     }
   }
 
@@ -43,6 +70,10 @@
     border-bottom: 1px solid lightgray;
     padding: 3px 8px;
     color: grey;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .sub-left {
       display: flex;
