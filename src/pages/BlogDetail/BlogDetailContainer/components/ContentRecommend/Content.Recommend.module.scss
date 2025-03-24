@@ -3,10 +3,10 @@
   background-color: rgb(237, 237, 237);
 
   .container {
-    width: 680px;
-    margin: 0 auto;
-
+    .medium-wrap,
     .layeredge-wrap {
+      width: 680px;
+      margin: 0 auto;
       h4 {
         font-size: 24px;
         margin: 16px 0 48px 0;
@@ -17,6 +17,9 @@
         grid-template-columns: repeat(2, 1fr);
         row-gap: 56px;
         column-gap: 32px;
+        padding-bottom: 56px;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 24px;
 
         .recommend-box {
           img {
@@ -81,6 +84,26 @@
             }
           }
         }
+      }
+
+      button {
+        padding: 8px 16px;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 96px;
+      }
+    }
+
+    .medium-wrap {
+      width: 680px;
+      margin: 0 auto;
+      margin-top: 88px;
+
+      button {
+        margin-bottom: 96px !important;
       }
     }
   }
