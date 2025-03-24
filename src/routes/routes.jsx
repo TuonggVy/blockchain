@@ -1,5 +1,6 @@
 import Blog from "../pages/Blog/Blog";
 import About from "../pages/Blog/BlogContent/AllContent/About/About";
+import BlogDetail from "../pages/BlogDetail/BlogDetail";
 import Docs from "../pages/Docs/Docs";
 import Ecosystem from "../pages/Ecosystem/Ecosystem";
 import Explorer from "../pages/Explorer/Explorer";
@@ -40,5 +41,9 @@ export const publicRoutes = [
   {
     path: "/blog/about",
     component: About,
+  },
+  {
+    path: "/blog/detail",
+    component: BlogDetail,
   },
 ];

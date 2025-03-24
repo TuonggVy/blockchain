@@ -1,0 +1,24 @@
+.wrap {
+  background-color: rgb(237, 237, 237);
+  width: 100%;
+  border-top: 1px solid lightgray;
+
+  .container {
+    padding: 24px 0;
+    width: 680px;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      list-style: none;
+
+      li {
+        font-size: 14px;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+  }
+}
