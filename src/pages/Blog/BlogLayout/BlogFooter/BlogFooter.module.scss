@@ -1,6 +1,5 @@
 .wrap {
   background-color: white;
-  height: 85px;
   .container {
     width: 1000px;
     height: 100%;
@@ -13,10 +12,21 @@
     align-items: center;
     justify-content: end;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 10px 20px 30px 20px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .menu-item-wrap {
       color: #737171;
       display: flex;
       align-items: center;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       a {
         color: #737171;
@@ -30,6 +40,10 @@
       span {
         padding: 0 5px;
         margin-bottom: 10px;
+
+        @media (max-width: 768px){
+          display: none;
+        }
       }
     }
   }

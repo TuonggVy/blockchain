@@ -6,6 +6,9 @@
   left: 0;
   right: 0;
   margin-right: 15px;
+  @media (max-width: 768px) {
+    margin-right: -1px;
+  }
   .container {
     width: 1032px;
     height: 100%;
@@ -15,11 +18,19 @@
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0 20px;
+    }
+
     .menu {
       color: #737171;
 
       span {
         margin-right: 16px;
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
 
       button {
