@@ -1,0 +1,49 @@
+.wrap {
+    width: 100%;
+    margin-bottom: 40px;
+    .header-container {
+      padding-top: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid lightgray;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 768px) {
+        padding-bottom: 10px;
+      }
+  
+      .logo {
+        font-size: 36px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+  
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #737171;
+  
+        span {
+          cursor: pointer;
+          font-size: 18px;
+        }
+  
+        button {
+          height: 19px;
+          background-color: white;
+          padding: 0 10px;
+          border-radius: 20px;
+          border: 1px solid #737171;
+          cursor: pointer;
+        }
+      }
+    }
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    margin: 0 20px;
+  }
+}
