@@ -23,7 +23,7 @@ function ContentBody() {
             style={{ fontSize: "20px", lineHeight: "32px" }}
           >
             <strong>
-              -> {para.strong}
+              &rarr; {para.strong}
               <br />
             </strong>
             {para.para}

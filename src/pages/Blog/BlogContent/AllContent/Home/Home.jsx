@@ -1,7 +1,9 @@
 import { SearchOutlined, XOutlined } from "@ant-design/icons";
 import styles from "./Home.module.scss";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const cardDataList = [
     {
       img: "https://www.accesswire.com/imagelibrary/f44186c8-a4e0-4c44-9ab6-d74210a3d35c/863863/MJZEorexKT83Z1ijnyqdgjepNWHl03CsGuLmogESt5vyz3KPvDiLumb00GIEOmDhwbDO1r9Jaa_WS-zZAh_l97MHWaCQHHTacF6eb5UlKbGB0yXikY6R3e0w7xrwF9GoQg4ds1hYTY9oMyCz7Y027kE.jpg",
@@ -191,7 +193,12 @@ function Home() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles["first-post-wrap"]}>
+        <div
+          onClick={() => {
+            navigate("/blog/detail");
+          }}
+          className={styles["first-post-wrap"]}
+        >
           <div className={styles["first-post-img-wrap"]}>
             <img src="https://www.accesswire.com/imagelibrary/f44186c8-a4e0-4c44-9ab6-d74210a3d35c/863863/MJZEorexKT83Z1ijnyqdgjepNWHl03CsGuLmogESt5vyz3KPvDiLumb00GIEOmDhwbDO1r9Jaa_WS-zZAh_l97MHWaCQHHTacF6eb5UlKbGB0yXikY6R3e0w7xrwF9GoQg4ds1hYTY9oMyCz7Y027kE.jpg" />
           </div>
@@ -216,7 +223,13 @@ function Home() {
 
         <div className={styles["post-list-container"]}>
           {cardDataList.map((card, index) => (
-            <div key={index} className={styles["post-card"]}>
+            <div
+              onClick={() => {
+                navigate("/blog/detail");
+              }}
+              key={index}
+              className={styles["post-card"]}
+            >
               <img src={card.img} />
 
               <div className={styles["post-card-info"]}>
