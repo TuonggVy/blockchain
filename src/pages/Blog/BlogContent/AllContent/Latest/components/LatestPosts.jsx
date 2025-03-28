@@ -7,7 +7,6 @@ import {
   XOutlined,
 } from "@ant-design/icons";
 import "./LatestPosts.scss";
-import { Link } from "react-router-dom";
 
 const latestPosts = [
   {
