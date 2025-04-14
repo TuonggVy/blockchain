@@ -1,9 +1,9 @@
-import React from 'react'
-import WriterCard from './WriterCard';
+import React from "react";
+import WriterCard from "./WriterCard";
 
 function WriterList() {
   const writers = [
-    { name: "Ayush Saha", image: "https://cdn-images-1.medium.com/fit/c/120/120/1*fvYHggwYOv4wFi7lcr9XMw.png" },
+    { name: "Ayush Saha", image: "/assets/images/Ayush_Saha.png" },
   ];
   return (
     <section className="writers">
@@ -15,4 +15,4 @@ function WriterList() {
   );
 }
 
-export default WriterList
+export default WriterList;

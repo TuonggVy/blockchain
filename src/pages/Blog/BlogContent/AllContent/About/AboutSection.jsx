@@ -5,7 +5,7 @@ function AboutSection() {
         <section className="about">
           <div className="logo-box">
                 <img 
-                    src="https://cdn-images-1.medium.com/v2/resize:fill:120:120/1*8lRcWHS3VZRapX8QkaJ4aw.png" 
+                    src="/assets/images/LayerEdge_logo_1.png" 
                     alt="LayerEdge Logo" 
                     className="logo-image"
                 />
